@@ -104,7 +104,9 @@ class _forgotState extends State<forgot> {
                   ),
                 Container(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/otp');
+                      },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
                           primary: Colors.black, //specify the button's elevation color

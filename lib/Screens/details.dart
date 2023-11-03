@@ -12,6 +12,7 @@ class _detailsState extends State<details> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xFF202020),
+        resizeToAvoidBottomInset: false,
         body: Container(
           padding: EdgeInsets.all(40.0),
           child: Column(

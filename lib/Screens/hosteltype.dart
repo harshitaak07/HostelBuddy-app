@@ -56,7 +56,9 @@ class _hosteltypeState extends State<hosteltype> {
               Container(
                 padding: EdgeInsets.all(4),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.pushNamed(context, '/details');
+                  },
                   style: ElevatedButton.styleFrom(
                       minimumSize: Size(310, 45),
                       primary:
@@ -95,7 +97,9 @@ class _hosteltypeState extends State<hosteltype> {
               Container(
                 padding: EdgeInsets.all(4),
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/details');
+                    },
                     style: ElevatedButton.styleFrom(
                         minimumSize: Size(310, 45),
                         primary:
