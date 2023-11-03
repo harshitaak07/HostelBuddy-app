@@ -21,7 +21,7 @@ class _forgotState extends State<forgot> {
               height: 80,
             ),
             Container(
-              height: 150,
+              height: 140,
               width: 125,
               decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -42,7 +42,7 @@ class _forgotState extends State<forgot> {
                     topLeft: Radius.circular(30.0),
                     topRight: Radius.circular(30.0),
                   ),
-                  color: Color(0xFFD9D9D9)),
+                  color: Colors.white),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -58,7 +58,7 @@ class _forgotState extends State<forgot> {
                       ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 15,
                   ),
                   const Text(
                     "Don’t worry, enter your registered number and we’ll send you a verification code. ",
@@ -69,7 +69,7 @@ class _forgotState extends State<forgot> {
                       textAlign: TextAlign.center,
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 30,
                   ),
                   const Text(
                     "Enter your Username/Number",

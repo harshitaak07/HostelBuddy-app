@@ -23,7 +23,7 @@ class _otpState extends State<otp> {
                     bottomLeft: Radius.circular(30.0),
                     bottomRight: Radius.circular(30.0),
                   ),
-                  color: Color(0xFFD9D9D9)),
+                  color: Colors.white),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -56,37 +56,38 @@ class _otpState extends State<otp> {
                   const SizedBox(
                     height: 30,
                   ),
-                  Row(children: [
+                  Align(alignment: Alignment.center,
+                  child: Row(children: [
                     Container(
-                      height: 64,
-                      width: 64,
+                      height: 54,
+                      width: 60,
                     color: Colors.black,
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                      Container(
-                      height: 64,
-                      width: 64,
+                      height: 54,
+                      width: 60,
                     color: Colors.black,
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                      Container(
-                      height: 64,
-                      width: 64,
+                      height: 54,
+                      width: 60,
                     color: Colors.black,
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                      Container(
-                      height: 64,
-                      width: 64,
+                      height: 54,
+                      width: 60,
                     color: Colors.black,
                     )
-                  ],),
+                  ],),),
                   const SizedBox(
                     height: 70,
                   ),

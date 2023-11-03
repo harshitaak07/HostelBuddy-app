@@ -44,7 +44,7 @@ class _detailsState extends State<details> {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.white),
               ),
               const SizedBox(
-                height: 25,
+                height: 40,
               ),
               const Text(
                 "Registration Number",
@@ -139,7 +139,7 @@ class _detailsState extends State<details> {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 90,
               ),
               Container(
                 child: ElevatedButton(
@@ -162,7 +162,7 @@ class _detailsState extends State<details> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 30,
               ),
               Container(
                 child: ElevatedButton(

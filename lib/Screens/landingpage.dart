@@ -20,11 +20,11 @@ class _landingState extends State<landing> {
                 height: 80,
               ),
               Container(
-                height: 200,
+                height: 150,
                 width: 700,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/Group6.png")),
+                    image: AssetImage("assets/Mainframe Design.png")),
                 ),
               ),
               const SizedBox(
