@@ -23,7 +23,7 @@ class _welcomeState extends State<welcome> {
               height: 80,
             ),
             Container(
-              height: 150,
+              height: 98,
               width: 160,
               decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -44,7 +44,7 @@ class _welcomeState extends State<welcome> {
                     topLeft: Radius.circular(30.0),
                     topRight: Radius.circular(30.0),
                   ),
-                  color: Color(0xFFD9D9D9)),
+                  color: Colors.white),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

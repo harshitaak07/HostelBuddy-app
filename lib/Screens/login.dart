@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
                     bottomLeft: Radius.circular(30.0),
                     bottomRight: Radius.circular(30.0),
                   ),
-                  color: Color(0xFFD9D9D9)),
+                  color: Colors.white),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

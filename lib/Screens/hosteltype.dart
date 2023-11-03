@@ -79,7 +79,7 @@ class _hosteltypeState extends State<hosteltype> {
                             decoration: TextDecoration.underline),
                       ),
                       ),
-                      SizedBox(width: 100,),
+                      SizedBox(width: 70,),
                       Container(
                         height: 55,
                         width: 55,
