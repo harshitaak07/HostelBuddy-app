@@ -119,14 +119,14 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   const SizedBox(
-                    height: 70,
+                    height: 50,
                   ),
-                 const Text(
-                    "Forgot Password? Click Here",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15
-                    ),
+                 TextButton(
+                    child: const Text("Forgot Password? Click Here",style: TextStyle(color: Colors.black,
+                      fontSize: 16,),),
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/forgot');
+                    },
                   ),
                 ],
               ),

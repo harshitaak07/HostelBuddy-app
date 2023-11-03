@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
 
+import 'package:hostelbuddy/Screens/hosteltype.dart';
+
 // ignore: camel_case_types
 class signup extends StatefulWidget {
   const signup({super.key});
@@ -193,7 +195,9 @@ class _signupState extends State<signup> {
                   ),
                   Container(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/hosteltype');
+                      },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
                           primary: Colors

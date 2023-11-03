@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Screens/login.dart';
 
 // ignore: camel_case_types
 class welcome extends StatefulWidget {
@@ -22,7 +24,7 @@ class _welcomeState extends State<welcome> {
             ),
             Container(
               height: 150,
-              width: 125,
+              width: 160,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(
@@ -62,7 +64,9 @@ class _welcomeState extends State<welcome> {
                   ),
                   Container(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/Login");
+                      },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
                           primary: Colors.black, //specify the button's elevation color
@@ -82,11 +86,11 @@ class _welcomeState extends State<welcome> {
                    const SizedBox(
                     height: 20,
                   ),
-                  const Text(
+                  Text(
                     "Login using OTP or google",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 20
+                      fontSize: 16,
                     )
                   ),
                 const SizedBox(
@@ -105,7 +109,9 @@ class _welcomeState extends State<welcome> {
                   ),
                 Container(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/Signup");
+                      },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
                           primary: Colors.black, //specify the button's elevation color
@@ -123,14 +129,14 @@ class _welcomeState extends State<welcome> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
-                 const Text(
-                    "Forgot Password? Click Here",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15
-                    ),
+                 TextButton(
+                    child: const Text("Forgot Password? Click Here",style: TextStyle(color: Colors.black,
+                      fontSize: 16,),),
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/forgot');
+                    },
                   ),
                 ],
               ),

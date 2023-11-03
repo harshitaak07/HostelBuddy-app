@@ -40,7 +40,9 @@ class _landingState extends State<landing> {
               ),
               Container(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/welcome');
+                      },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
                           primary: Colors.white, //specify the button's elevation color
