@@ -14,10 +14,10 @@ class _otpState extends State<otp> {
         backgroundColor: const Color(0xFF202020),
         body: Column(
           children: [
-              Container(
+            Container(
               width: 700,
-              height: 550,
-              padding: const EdgeInsets.all(40.0),
+              height: 637,
+              padding: const EdgeInsets.all(55.0),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30.0),
@@ -28,23 +28,25 @@ class _otpState extends State<otp> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
+                    height: 60,
+                  ),
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "One-Time Password",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 28,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
                     height: 30,
                   ),
                   const Align(
                     alignment: Alignment.centerLeft,
                   child: Text(
-                    "One-Time Password",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 28,
-                      ),
-                  ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  const Text(
                     "Kindly enter the one-time password sent on your registered number",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
@@ -53,60 +55,84 @@ class _otpState extends State<otp> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(
-                    height: 30,
                   ),
-                  Align(alignment: Alignment.center,
-                  child: Row(children: [
-                    Container(
-                      height: 54,
-                      width: 60,
-                    color: Colors.black,
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                     Container(
-                      height: 54,
-                      width: 60,
-                    color: Colors.black,
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                     Container(
-                      height: 54,
-                      width: 60,
-                    color: Colors.black,
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                     Container(
-                      height: 54,
-                      width: 60,
-                    color: Colors.black,
-                    )
-                  ],),),
                   const SizedBox(
-                    height: 70,
+                    height: 60,
                   ),
-                 const Text(
+                  Align(
+                    alignment: Alignment.center,
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 54,
+                          width: 60,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(4.0),
+                                bottomRight: Radius.circular(4.0),
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                              color: Colors.black),
+                        ),
+                        const SizedBox(
+                          width: 19,
+                        ),
+                        Container(
+                          height: 54,
+                          width: 60,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(4.0),
+                                bottomRight: Radius.circular(4.0),
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                              color: Colors.black),
+                        ),
+                        const SizedBox(
+                          width: 19,
+                        ),
+                        Container(
+                          height: 54,
+                          width: 60,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(4.0),
+                                bottomRight: Radius.circular(4.0),
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                              color: Colors.black),
+                        ),
+                        const SizedBox(
+                          width: 19,
+                        ),
+                        Container(
+                          height: 54,
+                          width: 60,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(4.0),
+                                bottomRight: Radius.circular(4.0),
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                              color: Colors.black),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  const Text(
                     "Didn't Get OTP?",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15
-                    ),
+                    style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                 const Text(
+                  const Text(
                     "Click Here to resend!",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15
-                    ),
+                    style: TextStyle(color: Colors.black, fontSize: 15, decoration: TextDecoration.underline),
                   ),
                 ],
               ),

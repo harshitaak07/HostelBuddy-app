@@ -14,173 +14,196 @@ class _detailsState extends State<details> {
         backgroundColor: Color(0xFF202020),
         resizeToAvoidBottomInset: false,
         body: Container(
-          padding: EdgeInsets.all(40.0),
+          padding: EdgeInsets.all(25.0),
           child: Column(
             children: [
+              const SizedBox(
+                height: 28,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    height: 38,
-                    width: 38,
+                    height: 140,
+                    width: 157.66,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assets/Group6.png"))),
                   ),
-                  const Text(
-                    "HostelBuddy",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 10,
-                        color: Colors.white),
+                  Container(
+                    padding: const EdgeInsets.only(bottom: 35, right: 10),
+                    child: const Text(
+                      "HostelBuddy",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: Colors.white),
+                    ),
                   )
                 ],
               ),
-              const SizedBox(
-                height: 30,
-              ),
               const Text(
-                "Enter your hostel room details",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.white),
+                "Enter your hostel room details:",
+                style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
               ),
               const SizedBox(
                 height: 40,
               ),
-              const Text(
-                "Registration Number",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: Size(300, 54),
-                      primary:
-                          Colors.white, //specify the button's elevation color
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                  child: const TextField(
-                    keyboardType: TextInputType.visiblePassword,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1,
-                    ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Registration Number",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                    fontSize: 18,
                   ),
-                ),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              const Text(
-                "Room Number",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: Size(300, 54),
-                      primary:
-                          Colors.white, //specify the button's elevation color
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                  child: const TextField(
-                    keyboardType: TextInputType.visiblePassword,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              const Text(
-                "Block",
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: Size(300, 54),
-                      primary:
-                          Colors.white, //specify the button's elevation color
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                  child: const TextField(
-                      keyboardType: TextInputType.visiblePassword,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
-                      )),
                 ),
               ),
               SizedBox(
-                height: 90,
+                height: 5,
               ),
               Container(
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                      minimumSize: Size(250, 54),
+                      minimumSize: Size(280, 54),
                       primary:
                           Colors.white, //specify the button's elevation color
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0))),
+                          borderRadius: BorderRadius.circular(10.0))),
+                  child: const TextField(
+                    keyboardType: TextInputType.visiblePassword,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Room Number",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: Size(280, 54),
+                      primary:
+                          Colors.white, //specify the button's elevation color
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                  child: const TextField(
+                    keyboardType: TextInputType.visiblePassword,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Block",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: Size(280, 54),
+                      primary:
+                          Colors.white, //specify the button's elevation color
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                  child: const TextField(
+                    keyboardType: TextInputType.visiblePassword,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Container(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: Size(180, 45),
+                      primary:
+                          Colors.white, //specify the button's elevation color
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0))),
                   child: const Text(
                     "Done",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
-                        decoration: TextDecoration.underline),
+                        letterSpacing: 1,),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 30,
+              const SizedBox(
+                height: 15,
               ),
               Container(
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                      minimumSize: Size(270, 54),
+                      minimumSize: Size(210, 40),
                       primary:
                           Colors.white, //specify the button's elevation color
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0))),
+                          borderRadius: BorderRadius.circular(18.0))),
                   child: const Text(
                     "Fill Later",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
-                        decoration: TextDecoration.underline),
+                        letterSpacing: 1,),
                   ),
                 ),
               ),

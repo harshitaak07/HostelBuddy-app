@@ -20,25 +20,21 @@ class _signupState extends State<signup> {
         body: Column(
           children: [
             const SizedBox(
-              height: 100,
+              height: 95,
             ),
             Expanded(
-                child: SingleChildScrollView(
                   child: Container(
               width: 700,
-              padding: const EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(50.0),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30.0),
-                    topRight: Radius.circular(30.0),
+                    topLeft: Radius.circular(24.0),
+                    topRight: Radius.circular(24.0),
                   ),
                   color: Colors.white),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const SizedBox(
-                    height: 30,
-                  ),
                   const Align(
                     alignment: Alignment.centerLeft,
                   child: Text(
@@ -46,7 +42,7 @@ class _signupState extends State<signup> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
-                      fontSize: 25,
+                      fontSize: 32,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -63,9 +59,11 @@ class _signupState extends State<signup> {
                   ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 25,
                   ),
-                  const Text(
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
                     "Username",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
@@ -73,6 +71,7 @@ class _signupState extends State<signup> {
                       color: Colors.black,
                       fontSize: 18,
                     ),
+                  ),
                   ),
                   Container(
                     child: ElevatedButton(
@@ -95,9 +94,11 @@ class _signupState extends State<signup> {
                     ),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 25,
                   ),
-                  const Text(
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
                     "Contact Number",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
@@ -106,6 +107,7 @@ class _signupState extends State<signup> {
                       fontSize: 18,
                     ),
                   ),
+                  ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
@@ -127,9 +129,11 @@ class _signupState extends State<signup> {
                     ),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 25,
                   ),
-                  const Text(
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
                     "Password",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
@@ -138,6 +142,7 @@ class _signupState extends State<signup> {
                       fontSize: 18,
                     ),
                   ),
+                  ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
@@ -159,9 +164,11 @@ class _signupState extends State<signup> {
                     ),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 25,
                   ),
-                  const Text(
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
                     "Confirm Password",
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
@@ -170,6 +177,7 @@ class _signupState extends State<signup> {
                       fontSize: 18,
                     ),
                   ),
+                  ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
@@ -191,15 +199,16 @@ class _signupState extends State<signup> {
                     ),
                   ),
                   const SizedBox(
-                    height: 60,
+                    height: 25,
                   ),
                   Container(
+                    padding: EdgeInsets.all(10.0),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/hosteltype');
                       },
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(294, 54),
+                          minimumSize: Size(180, 47.65),
                           primary: Colors
                               .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
@@ -209,7 +218,6 @@ class _signupState extends State<signup> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
-                            fontWeight: FontWeight.bold,
                             letterSpacing: 1,
                             decoration: TextDecoration.underline),
                       ),
@@ -218,7 +226,7 @@ class _signupState extends State<signup> {
                 ],
               ),
                   ),
-            )),
+            ),
           ],
         ));
   }

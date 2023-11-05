@@ -21,8 +21,8 @@ class _forgotState extends State<forgot> {
               height: 80,
             ),
             Container(
-              height: 140,
-              width: 125,
+              height: 240,
+              width: 270.28,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(
@@ -35,8 +35,9 @@ class _forgotState extends State<forgot> {
             ),
             Expanded(
                 child: Container(
+                  height: 545,
               width: 700,
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(45.0),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30.0),
@@ -58,9 +59,11 @@ class _forgotState extends State<forgot> {
                       ),
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
-                  const Text(
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
                     "Don’t worry, enter your registered number and we’ll send you a verification code. ",
                     style: TextStyle(
                         color: Colors.black,
@@ -68,10 +71,13 @@ class _forgotState extends State<forgot> {
                       ),
                       textAlign: TextAlign.center,
                   ),
-                  const SizedBox(
-                    height: 30,
                   ),
-                  const Text(
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
                     "Enter your Username/Number",
                     style: TextStyle(
                         fontWeight: FontWeight.normal,
@@ -80,11 +86,12 @@ class _forgotState extends State<forgot> {
                         fontSize: 18,
                       ),
                   ),
+                  ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(300, 54),
+                          minimumSize: Size(306, 54),
                           primary: Colors.black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0))),
@@ -108,7 +115,7 @@ class _forgotState extends State<forgot> {
                         Navigator.pushNamed(context, '/otp');
                       },
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(294, 54),
+                          minimumSize: Size(180, 47.65),
                           primary: Colors.black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0))),
