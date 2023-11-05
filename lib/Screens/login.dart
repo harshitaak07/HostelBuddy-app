@@ -14,63 +14,66 @@ class _LoginState extends State<Login> {
         backgroundColor: const Color(0xFF202020),
         body: Column(
           children: [
-              Container(
+            Container(
               width: 700,
-              height: 550,
+              height: 690,
               padding: const EdgeInsets.all(40.0),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30.0),
-                    bottomRight: Radius.circular(30.0),
+                    bottomLeft: Radius.circular(24.0),
+                    bottomRight: Radius.circular(24.0),
                   ),
                   color: Colors.white),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 130,
                   ),
                   const Align(
                     alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Proceed with your",
-                    style: TextStyle(
+                    child: Text(
+                      "Proceed with your",
+                      style: TextStyle(
                         color: Colors.black,
                         fontSize: 28,
                       ),
-                  ),
+                    ),
                   ),
                   const Align(
                     alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         fontSize: 28,
                       ),
-                  ),
-                  ),
-                  const SizedBox(
-                    height: 30,
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
                   ),
-                  const Text(
-                    "Username/Contact Number",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
-                      fontSize: 18,
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Username/Contact Number",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(250, 40),
+                          minimumSize: Size(306, 54),
                           primary: Colors
                               .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
@@ -89,20 +92,23 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 30,
                   ),
-                  const Text(
-                    "Password",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
-                      fontSize: 18,
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Password",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(250, 40),
+                          minimumSize: Size(306, 54),
                           primary: Colors
                               .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
@@ -119,12 +125,16 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 80,
                   ),
-                 TextButton(
-                    child: const Text("Forgot Password? Click Here",style: TextStyle(color: Colors.black,
-                      fontSize: 16,),),
-                    onPressed: (){
+                  TextButton(
+                    child: const Text(
+                      "Forgot Password? Click here!",
+                      style: TextStyle(
+                          color: Color(0xFF606060),
+                          fontSize: 16,),
+                    ),
+                    onPressed: () {
                       Navigator.pushNamed(context, '/forgot');
                     },
                   ),

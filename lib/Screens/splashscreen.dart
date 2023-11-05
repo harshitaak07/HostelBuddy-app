@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:hostelbuddy/Screens/landingpage.dart';
 // ignore: depend_on_referenced_packages
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,6 +11,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const landing(),
+          ));
+    });
+  }
+
 
   
   @override
@@ -19,12 +33,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child:Column(
         children: [
-          SizedBox(height: 200,),
+          SizedBox(height: 300,),
         Align(
         alignment: Alignment.center,
         child: Container(
               height: 400,
-              width: 400,
+              width: 450,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(

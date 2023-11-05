@@ -23,8 +23,8 @@ class _welcomeState extends State<welcome> {
               height: 80,
             ),
             Container(
-              height: 98,
-              width: 160,
+              height: 270.28,
+              width: 240,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(
@@ -32,12 +32,10 @@ class _welcomeState extends State<welcome> {
                 ),
               )),
             ),
-            const SizedBox(
-              height: 10,
-            ),
             Expanded(
                 child: Container(
-              width: 700,
+              width: 536,
+              height: 390,
               padding: const EdgeInsets.all(25.0),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -129,15 +127,18 @@ class _welcomeState extends State<welcome> {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 32,
                   ),
-                 TextButton(
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                  child: TextButton(
                     child: const Text("Forgot Password? Click Here",style: TextStyle(color: Colors.black,
                       fontSize: 16,),),
                     onPressed: (){
                       Navigator.pushNamed(context, '/forgot');
                     },
                   ),
+                  )
                 ],
               ),
             )),

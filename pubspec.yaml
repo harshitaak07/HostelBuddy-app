@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: 2.0.9
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -37,6 +38,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   device_preview: ^1.1.0
+  flutter_native_splash: ^2.3.5
+
+ 
+
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +70,8 @@ flutter:
     - assets/Group6.png
     - assets/men.png
     - assets/women.png
-    - assets/Mainframe Design.png
+    - assets/SplashScreen.png
+    - assets/brr.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -83,13 +89,3 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/Montserrat-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-    # - family: Lexend
-    #   fonts:
-    #     - assets/Lexend-Black.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages

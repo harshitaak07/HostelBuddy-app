@@ -20,20 +20,20 @@ class _hosteltypeState extends State<hosteltype> {
                 height: 80,
               ),
               Container(
-                height: 200,
-                width: 700,
+                height: 240,
+                width: 270.28,
                 decoration: const BoxDecoration(
                   image:
                       DecorationImage(image: AssetImage("assets/Group6.png")),
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Kindly Select",
+                  "Kindly Select your",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -43,7 +43,7 @@ class _hosteltypeState extends State<hosteltype> {
               const Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Your Hostel Type",
+                  "Hostel Type:",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -51,7 +51,7 @@ class _hosteltypeState extends State<hosteltype> {
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 80,
               ),
               Container(
                 padding: EdgeInsets.all(4),
@@ -60,13 +60,16 @@ class _hosteltypeState extends State<hosteltype> {
                      Navigator.pushNamed(context, '/details');
                   },
                   style: ElevatedButton.styleFrom(
-                      minimumSize: Size(310, 45),
+                      minimumSize: Size(295,44),
                       primary:
                           Colors.white, //specify the button's elevation color
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0))),
+                          borderRadius: BorderRadius.circular(15.0))),
                   child: Row(
                      children: [
+                      SizedBox(
+                        width: 70,
+                      ),
                       const Align(
                         alignment: Alignment.center,
                       child: Text(
@@ -75,17 +78,15 @@ class _hosteltypeState extends State<hosteltype> {
                             color: Colors.black,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline),
+                            letterSpacing: 1,),
                       ),
                       ),
-                      SizedBox(width: 70,),
                       Container(
                         height: 55,
                         width: 55,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/men.png")),
+                              image: AssetImage("")),
                         ),
                       ),
                     ])
@@ -101,22 +102,24 @@ class _hosteltypeState extends State<hosteltype> {
                       Navigator.pushNamed(context, '/details');
                     },
                     style: ElevatedButton.styleFrom(
-                        minimumSize: Size(310, 45),
+                        minimumSize: Size(295,44),
                         primary:
                             Colors.white, //specify the button's elevation color
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0))),
+                            borderRadius: BorderRadius.circular(15.0))),
                     child: Row(
                      children: [
+                      SizedBox(
+                        width: 20,
+                      ),
                       Container(
                         height: 55,
                         width: 55,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/women.png")),
+                              image: AssetImage("")),
                         ),
                       ),
-                      SizedBox(width: 40,),
                       const Align(
                         alignment: Alignment.center,
                       child: Text(
@@ -126,7 +129,7 @@ class _hosteltypeState extends State<hosteltype> {
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 1,
-                            decoration: TextDecoration.underline),
+                            ),
                       ),
                       ),
                     ])),
