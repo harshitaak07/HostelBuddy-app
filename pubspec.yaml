@@ -72,6 +72,9 @@ flutter:
     - assets/women.png
     - assets/SplashScreen.png
     - assets/brr.png
+    - assets/image6.png
+    - assets/image7.png
+    - assets/image8.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
