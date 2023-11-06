@@ -168,7 +168,9 @@ class _detailsState extends State<details> {
               ),
               Container(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/done');
+                  },
                   style: ElevatedButton.styleFrom(
                       minimumSize: Size(180, 45),
                       primary:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hostelbuddy/Screens/bank.dart';
 import 'package:hostelbuddy/Screens/details.dart';
 import 'package:hostelbuddy/Screens/forgot.dart';
 import 'package:hostelbuddy/Screens/hosteltype.dart';
@@ -69,7 +70,12 @@ class MyApp extends StatelessWidget {
       return MaterialPageRoute(
         builder: (context) => otp(),
       );
-    }// Handle other routes if needed
+    }
+    else if (settings.name == '/done') {
+      return MaterialPageRoute(
+        builder: (context) => bank(),
+      );
+    }/// Handle other routes if needed
   },
       debugShowCheckedModeBanner: false,
       useInheritedMediaQuery: true,
