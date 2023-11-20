@@ -1,35 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class landing extends StatefulWidget {
-  const landing({super.key});
+class landingpage extends StatefulWidget {
+  const landingpage({super.key});
 
   @override
-  State<landing> createState() => _landingState();
+  State<landingpage> createState() => _landingpageState();
 }
 
-class _landingState extends State<landing> {
+class _landingpageState extends State<landingpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF202020),
-      body: Column(
+      body: Container(
+        padding: EdgeInsets.all(7.0),
+        child:Column(
         children: [
           const SizedBox(
             height: 60,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 500,
+            height: 480,
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage("assets/brr.png"),
+                image: AssetImage("assets/landing.png"),
               ),
             ),
           ),
           Container(
-            padding: EdgeInsets.all(30),
+            padding: EdgeInsets.all(10),
             child: Column(
               children: [
                 const Align(
@@ -38,8 +40,9 @@ class _landingState extends State<landing> {
                     "hostelbuddy.",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 28,
-                        color: Colors.white),
+                        fontSize: 32,
+                        color: Colors.white,
+                        fontFamily: 'sfpro'),
                   ),
                 ),
                 const SizedBox(
@@ -48,13 +51,14 @@ class _landingState extends State<landing> {
                 const Text(
                   "HostelBuddy helps you deal with your campus conveniences with ease that will make you smile.",
                   style: TextStyle(
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w300,
                       fontSize: 16,
-                      color: Colors.white),
+                      color: Colors.white,
+                      fontFamily: 'hel'),
                   textAlign: TextAlign.left,
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
                 Container(
                   child: ElevatedButton(
@@ -70,11 +74,11 @@ class _landingState extends State<landing> {
                     child: const Text(
                       "Get Started",
                       style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
-                      ),
+                          color: Colors.black,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1,
+                          fontFamily: 'sfpro'),
                     ),
                   ),
                 ),
@@ -82,6 +86,7 @@ class _landingState extends State<landing> {
             ),
           )
         ],
+      ),
       ),
     );
   }

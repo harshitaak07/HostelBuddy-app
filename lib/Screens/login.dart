@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -27,17 +28,40 @@ class _LoginState extends State<Login> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Row(children: [
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Container(
+                          child: IconButton(
+                        icon: const Icon(
+                          Icons.arrow_back_ios_outlined,
+                          color: Colors.black,
+                          size: 20,
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      )),
+                    ),
+                    const Text(
+                      'Back',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 16),
+                    )
+                  ]),
                   const SizedBox(
-                    height: 130,
+                    height: 80,
                   ),
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Proceed with your",
                       style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 28,
-                      ),
+                          color: Colors.black,
+                          fontSize: 28,
+                          fontFamily: 'sfpro'),
                     ),
                   ),
                   const Align(
@@ -45,10 +69,10 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 28,
-                      ),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 28,
+                          fontFamily: 'sfpro'),
                     ),
                   ),
                   const SizedBox(
@@ -57,15 +81,15 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 30,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Username/Contact Number",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w500,
                         fontStyle: FontStyle.italic,
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 16,
                       ),
                     ),
                   ),
@@ -73,7 +97,7 @@ class _LoginState extends State<Login> {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(306, 54),
+                          minimumSize: const Size(306, 54),
                           primary: Colors
                               .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
@@ -92,15 +116,15 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 30,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Password",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w500,
                         fontStyle: FontStyle.italic,
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 16,
                       ),
                     ),
                   ),
@@ -108,7 +132,7 @@ class _LoginState extends State<Login> {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(306, 54),
+                          minimumSize: const Size(306, 54),
                           primary: Colors
                               .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
@@ -128,11 +152,13 @@ class _LoginState extends State<Login> {
                     height: 80,
                   ),
                   TextButton(
-                    child: const Text(
+                    child: Text(
                       "Forgot Password? Click here!",
-                      style: TextStyle(
-                          color: Color(0xFF606060),
-                          fontSize: 16,),
+                      style: GoogleFonts.montserrat(
+                        color: const Color(0xFF606060),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, '/forgot');

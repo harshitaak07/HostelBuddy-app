@@ -17,14 +17,29 @@ class _hosteltypeState extends State<hosteltype> {
           child: Column(
             children: [
               const SizedBox(
-                height: 80,
+                height: 20,
               ),
+              Align(
+              alignment: Alignment.center,
+              child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  )),
+            ),
               Container(
                 height: 240,
                 width: 270.28,
                 decoration: const BoxDecoration(
                   image:
-                      DecorationImage(image: AssetImage("assets/Group6.png")),
+                      DecorationImage(image: AssetImage("assets/logo.png")),
                 ),
               ),
               const SizedBox(

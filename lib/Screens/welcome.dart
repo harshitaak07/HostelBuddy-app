@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hostelbuddy/Screens/login.dart';
+import 'package:image_network/image_network.dart';
 
 // ignore: camel_case_types
 class welcome extends StatefulWidget {
@@ -20,7 +20,22 @@ class _welcomeState extends State<welcome> {
         body: Column(
           children: [
             const SizedBox(
-              height: 80,
+              height: 20,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  )),
             ),
             Container(
               height: 270.28,
@@ -28,7 +43,7 @@ class _welcomeState extends State<welcome> {
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(
-                  "assets/Group6.png",
+                  "assets/logo.png",
                 ),
               )),
             ),
@@ -47,18 +62,18 @@ class _welcomeState extends State<welcome> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 15,
                   ),
                   const Text(
                     "Welcome to HostelBuddy!",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 28,
-                      ),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: 28,
+                    ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 15,
                   ),
                   Container(
                     child: ElevatedButton(
@@ -67,9 +82,10 @@ class _welcomeState extends State<welcome> {
                       },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
-                          primary: Colors.black, //specify the button's elevation color
+                          primary: Colors
+                              .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0))),
+                              borderRadius: BorderRadius.circular(12.0))),
                       child: const Text(
                         "Login",
                         style: TextStyle(
@@ -81,40 +97,60 @@ class _welcomeState extends State<welcome> {
                       ),
                     ),
                   ),
-                   const SizedBox(
-                    height: 20,
+                  const SizedBox(
+                    height: 15,
                   ),
-                  Text(
-                    "Login using OTP or google",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                    )
-                  ),
-                const SizedBox(
-                    height: 20,
-                  ),
-                const Text(
-                    "OR",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30
+                  Align(
+                    alignment: Alignment.center,
+                    child: Row(
+                      children: [
+                        const Text(
+                            "                        Login using OTP or ",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            )),
+                        Container(
+                          width: 20,
+                          height: 20,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                  // decoration: BoxDecoration(color: Colors.blue),
+                                  child: Image.network(
+                                      'http://pngimg.com/uploads/google/google_PNG19635.png',
+                                      fit: BoxFit.cover)),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
-                const SizedBox(
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "OR",
+                    style: GoogleFonts.lexend(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30),
+                  ),
+                  const SizedBox(
                     height: 20,
                   ),
-                Container(
+                  Container(
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.pushNamed(context, "/Signup");
                       },
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(294, 54),
-                          primary: Colors.black, //specify the button's elevation color
+                          primary: Colors
+                              .black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0))),
+                              borderRadius: BorderRadius.circular(12.0))),
                       child: const Text(
                         "Sign Up",
                         style: TextStyle(
@@ -127,18 +163,36 @@ class _welcomeState extends State<welcome> {
                     ),
                   ),
                   const SizedBox(
-                    height: 32,
+                    height: 22,
                   ),
                   Align(
-                    alignment: Alignment.bottomCenter,
-                  child: TextButton(
-                    child: const Text("Forgot Password? Click Here",style: TextStyle(color: Colors.black,
-                      fontSize: 16,),),
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/forgot');
-                    },
-                  ),
-                  )
+                      alignment: Alignment.bottomCenter,
+                      child: Column(children: [
+                        TextButton(
+                          child: const Text(
+                            "Forgot Password? Click Here",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/forgot');
+                          },
+                        ),
+                        TextButton(
+                          child: const Text(
+                            "Reset Password? Click Here",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/reset');
+                          },
+                        ),
+                      ])),
                 ],
               ),
             )),
