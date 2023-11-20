@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
-
+import 'package:google_fonts/google_fonts.dart';
 // ignore: camel_case_types
 class forgot extends StatefulWidget {
   const forgot({super.key});
@@ -15,10 +15,26 @@ class _forgotState extends State<forgot> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xFF202020),
+        resizeToAvoidBottomInset: false,
         body: Column(
           children: [
             const SizedBox(
-              height: 80,
+              height: 20,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  )),
             ),
             Container(
               height: 240,
@@ -26,7 +42,7 @@ class _forgotState extends State<forgot> {
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(
-                  "assets/Group6.png",
+                  "assets/logo.png",
                 ),
               )),
             ),
@@ -48,7 +64,7 @@ class _forgotState extends State<forgot> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 25,
                   ),
                   const Text(
                     "Forgot Password?",
@@ -56,34 +72,35 @@ class _forgotState extends State<forgot> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         fontSize: 28,
+                        fontFamily: 'sfpro'
                       ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.centerLeft,
                   child: Text(
                     "Don’t worry, enter your registered number and we’ll send you a verification code. ",
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                         color: Colors.black,
                         fontSize: 16,
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.left,
                   ),
                   ),
                   const SizedBox(
                     height: 50,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.centerLeft,
                   child: Text(
                     "Enter your Username/Number",
-                    style: TextStyle(
-                        fontWeight: FontWeight.normal,
+                    style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w500,
                         fontStyle: FontStyle.italic,
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 16,
                       ),
                   ),
                   ),
@@ -119,9 +136,9 @@ class _forgotState extends State<forgot> {
                           primary: Colors.black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0))),
-                      child: const Text(
+                      child: Text(
                         "Send OTP",
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,

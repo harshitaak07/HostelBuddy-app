@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
 
+import 'package:google_fonts/google_fonts.dart';
+
 // ignore: camel_case_types
 class reset extends StatefulWidget {
   const reset({super.key});
@@ -14,19 +16,35 @@ class _resetState extends State<reset> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF202020),
+      backgroundColor: const Color(0xFF202020),
+        resizeToAvoidBottomInset: false,
         body: Column(
           children: [
             const SizedBox(
-              height: 80,
+              height: 20,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                  padding: EdgeInsets.all(5),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  )),
             ),
             Container(
-              height: 150,
-              width: 125,
+              height: 240,
+              width: 270.28,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage(
-                  "assets/Group6.png",
+                  "assets/logo.png",
                 ),
               )),
             ),
@@ -35,8 +53,9 @@ class _resetState extends State<reset> {
             ),
             Expanded(
                 child: Container(
+                  height: 545,
               width: 700,
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(45.0),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30.0),
@@ -47,84 +66,101 @@ class _resetState extends State<reset> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 25,
                   ),
                   const Text(
-                    "Create New Password",
+                    "Reset Password",
                     style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(300, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 28,
+                        fontFamily: 'sfpro'
                       ),
-                    ),
                   ),
                   const SizedBox(
                     height: 40,
                   ),
-                  const Text(
-                    "Confirm Password",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Create New Password",
+                    style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                        fontSize: 16,
+                      ),
+                  ),
                   ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(300, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
+                          minimumSize: Size(306, 54),
+                          primary: Colors.black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0))),
                       child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
+                       keyboardType: TextInputType.visiblePassword,
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1,
+                          ),
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 60,
+                   const SizedBox(
+                    height: 30,
+                  ),
+                Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Confirm Password",
+                    style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                        fontSize: 16,
+                      ),
+                  ),
                   ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(294, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
+                          minimumSize: Size(306, 54),
+                          primary: Colors.black, //specify the button's elevation color
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0))),
-                      child: const Text(
-                        "Done",
+                              borderRadius: BorderRadius.circular(10.0))),
+                      child: const TextField(
+                       keyboardType: TextInputType.visiblePassword,
                         style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1,
+                          ),
+                      ),
+                    ),
+                  ),
+                const SizedBox(
+                    height: 40,
+                  ),
+                Container(
+                    child: ElevatedButton(
+                      onPressed: () {
+                      Navigator.pushNamed(context, '/hosteltype');
+                      },
+                      style: ElevatedButton.styleFrom(
+                          minimumSize: Size(204, 54),
+                          primary: Colors.black, //specify the button's elevation color
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0))),
+                      child: Text(
+                        "Done",
+                        style: GoogleFonts.montserrat(
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -137,6 +173,7 @@ class _resetState extends State<reset> {
               ),
             )),
           ],
-        ));
+        )
+    );
   }
 }

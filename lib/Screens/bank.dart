@@ -70,7 +70,7 @@ class _bankState extends State<bank> {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage("assets/image7.png"),
+                              image: AssetImage("assets/pickup.png"),
                             ),
                           ),
                         ),
@@ -93,11 +93,11 @@ class _bankState extends State<bank> {
                       children: [
                         Container(
                           height: 110,
-                          width: 85,
+                          width: 95,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage("assets/image6.png"),
+                              image: AssetImage("assets/delivery.png"),
                             ),
                           ),
                         ),
@@ -134,21 +134,24 @@ class _bankState extends State<bank> {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage("assets/image8.png"),
+                      image: AssetImage("assets/tracking.png"),
                     ),
                   ),
                 ),
                 const SizedBox(
                   width: 17,
                 ),
-                const Align(
+                Align(
                   alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Navigation/Tracking",
+                  child: TextButton(
+                   child: const Text( "Navigation/Tracking",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 19,
-                        color: Colors.white),
+                        fontSize: 15,
+                        color: Colors.white)), 
+                        onPressed: () {  
+                          Navigator.pushNamed(context, '/pickup');
+                        },
                   ),
                 ),
               ]),
@@ -167,7 +170,7 @@ class _bankState extends State<bank> {
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     width: 300,
                     height: 127.59,
                     decoration: const BoxDecoration(
