@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "166880431213",
+    "project_id": "hostelbuddy-a56c6",
+    "storage_bucket": "hostelbuddy-a56c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166880431213:android:f19465a4277918e2158364",
+        "android_client_info": {
+          "package_name": "com.example.hostelbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166880431213-7ap5dr55fkevcf6rsfukjsq048gtkpk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6xGM8OVxqlsIH8-YorRvY9iFid9EihBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166880431213-7ap5dr55fkevcf6rsfukjsq048gtkpk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

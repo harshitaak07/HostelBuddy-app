@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
 import 'package:google_fonts/google_fonts.dart';
-import 'package:image_network/image_network.dart';
+import 'package:hostelbuddy/Widgets/google_sign_in.dart';
+import 'package:provider/provider.dart';
 
 // ignore: camel_case_types
 class welcome extends StatefulWidget {
@@ -116,11 +117,18 @@ class _welcomeState extends State<welcome> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Container(
-                                  // decoration: BoxDecoration(color: Colors.blue),
+                              GestureDetector(
+                                onTap: () async {
+                                  final provider = Provider.of<googleSignInProvider>(context, listen: false);
+                                  await provider.googleLogin();
+                                },
+                                child: Container(
                                   child: Image.network(
-                                      'http://pngimg.com/uploads/google/google_PNG19635.png',
-                                      fit: BoxFit.cover)),
+                                    'http://pngimg.com/uploads/google/google_PNG19635.png',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         )
