@@ -46,6 +46,10 @@ dependencies:
   google_fonts: ^6.1.0
   flutter_rating_bar: ^4.0.1
 
+  flutter_riverpod: ^2.4.9
+  hooks_riverpod: ^2.4.9
+  flutter_hooks: ^0.20.3
+
   # dependency for images, icons, svg
   cupertino_icons: ^1.0.2   
   device_preview: ^1.1.0  
@@ -74,7 +78,7 @@ dependencies:
   another_flushbar: ^1.12.29
   flutter_local_notifications: ^13.0.0
   clipboard: ^0.1.3
-  fluttertoast: ^8.0.8
+  # fluttertoast: ^8.0.8
 
   # dependency for firebase
   # firebase_auth: ^3.3.5
@@ -123,6 +127,7 @@ flutter:
     - assets/SFPRODISPLAYMEDIUM.OTF
     - assets/HelveticaNeue-Medium.otf
     - assets/GreyBackground.png
+    - assets/Mainframe Design.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
