@@ -1,5 +1,5 @@
 # hostelbuddy
 
-A new flutter project.
+App implementation using Flutter
 
 
