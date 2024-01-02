@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import "dart:ui";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hostelbuddy/Widgets/button_containerb.dart';
 import 'package:hostelbuddy/Widgets/forgot_password_link.dart';
@@ -27,7 +26,7 @@ class _WelcomeState extends State<Welcome> {
             Align(
               alignment: Alignment.center,
               child: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back_ios_outlined,

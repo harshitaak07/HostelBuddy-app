@@ -136,25 +136,21 @@ class _FeedbackState extends State<Feedback> {
             ),
             Row(children: [
               const SizedBox(width: 30),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(128, 38),
-                      primary:
-                          Colors.white, //specify the button's elevation color
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12.0),
-                          side: const BorderSide(color: Colors.white))),
-                  child: const Text(
-                    "Submit",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
-                        fontFamily: 'sfpro'),
-                  ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(128, 38), backgroundColor: Colors.white, //specify the button's elevation color
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        side: const BorderSide(color: Colors.white))),
+                child: const Text(
+                  "Submit",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                      fontFamily: 'sfpro'),
                 ),
               ),
               const SizedBox(width: 5),

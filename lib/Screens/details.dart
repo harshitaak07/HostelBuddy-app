@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:hostelbuddy/Widgets/custom_button_container.dart';
 import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
@@ -14,10 +14,10 @@ class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFF202020),
+        backgroundColor: const Color(0xFF202020),
         resizeToAvoidBottomInset: false,
         body: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               const SizedBox(
@@ -46,7 +46,7 @@ class _DetailsState extends State<Details> {
                 ],
               ),
               Container(
-                padding: EdgeInsets.all(30),
+                padding: const EdgeInsets.all(30),
               child: Column(
                 children: [
                   const Text(

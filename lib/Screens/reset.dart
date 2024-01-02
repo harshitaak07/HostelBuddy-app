@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import "dart:ui";
 
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:hostelbuddy/Widgets/custom_button_container.dart';
 import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
@@ -28,7 +27,7 @@ class _ResetState extends State<Reset> {
             Align(
               alignment: Alignment.center,
               child: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back_ios_outlined,

@@ -14,102 +14,100 @@ class _InitializeState extends State<Initialize> {
         backgroundColor: const Color(0xFF202020),
         resizeToAvoidBottomInset: false,
         body: Column(children: [
-          Container(
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 28,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(bottom: 35, right: 10),
-                      height: 140,
-                      width: 157.66,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/logo.png"))),
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 80,
-                ),
-                Container(
-                    padding: const EdgeInsets.all(25.0),
-                    child: const Column(children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Name",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white),
-                        ),
+          Column(
+            children: [
+              const SizedBox(
+                height: 28,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(bottom: 35, right: 10),
+                    height: 140,
+                    width: 157.66,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/logo.png"))),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              Container(
+                  padding: const EdgeInsets.all(25.0),
+                  child: const Column(children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Name",
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
                       ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Lorem ipusm",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Lorem ipusm",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 40,
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Contact",
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
                       ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Contact",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white),
-                        ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Lorem ipusm",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white),
                       ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Lorem ipusm",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Courier",
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 40,
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Lorem ipusm",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white),
                       ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Courier",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Lorem ipusm",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
-                      ),
-                    ]))
-              ],
-            ),
+                    ),
+                  ]))
+            ],
           ),
-          SizedBox(height: 125),
+          const SizedBox(height: 125),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

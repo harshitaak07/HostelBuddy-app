@@ -9,12 +9,13 @@ class UsernameTextField extends StatelessWidget {
   final TextInputType keyboardType;
 
   const UsernameTextField({
+    Key? key,
     required this.text,
     required this.onPressed,
     required this.textColor,
     required this.containerColor,
     required this.keyboardType,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,27 +33,24 @@ class UsernameTextField extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          Container(
-            child: ElevatedButton(
-              onPressed: onPressed,
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(306, 54),
-                primary: containerColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
+          ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(306, 54), backgroundColor: containerColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
               ),
-              child: TextField(
-                keyboardType: keyboardType,
-                style: TextStyle(
-                  color: textColor,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1,
-                ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                ),
+            ),
+            child: TextField(
+              keyboardType: keyboardType,
+              style: TextStyle(
+                color: textColor,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1,
+              ),
+              decoration: const InputDecoration(
+                border: InputBorder.none,
               ),
             ),
           ),

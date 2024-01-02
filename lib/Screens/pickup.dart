@@ -129,27 +129,24 @@ class _PickupState extends State<Pickup> {
                   const SizedBox(
                     height: 71,
                   ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/request');
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(200, 53),
-                          primary: const Color(
-                              0xFF202020), //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.0),
-                              side: const BorderSide(color: Colors.white))),
-                      child: const Text(
-                        "Find",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 21,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            fontFamily: 'sfpro'),
-                      ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/request');
+                    },
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(200, 53), backgroundColor: const Color(
+                            0xFF202020), //specify the button's elevation color
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            side: const BorderSide(color: Colors.white))),
+                    child: const Text(
+                      "Find",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 21,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1,
+                          fontFamily: 'sfpro'),
                     ),
                   ),
                 ],

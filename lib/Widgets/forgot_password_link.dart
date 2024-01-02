@@ -12,6 +12,7 @@ class ForgotPasswordLink extends StatelessWidget {
       child: Column(
         children: [
           TextButton(
+            onPressed: onPressed,
             child: const Text(
               "Forgot Password? Click Here",
               style: TextStyle(
@@ -19,7 +20,6 @@ class ForgotPasswordLink extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            onPressed: onPressed,
           ),
         ],
       ),

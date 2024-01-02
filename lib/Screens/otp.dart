@@ -35,17 +35,16 @@ class _OtpState extends State<Otp> {
                   Row(children: [
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Container(
-                          child: IconButton(
+                      child: IconButton(
                         icon: const Icon(
-                          Icons.arrow_back_ios_outlined,
-                          color: Colors.black,
-                          size: 20,
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.black,
+                      size: 20,
                         ),
                         onPressed: () {
-                          Navigator.pop(context);
+                      Navigator.pop(context);
                         },
-                      )),
+                      ),
                     ),
                     const Text(
                       'Back',

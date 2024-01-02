@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hostelbuddy/Components/HamDrawer.dart';
+import 'package:hostelbuddy/Components/ham_drawer.dart';
 
 class Bank extends StatefulWidget {
   const Bank({super.key});

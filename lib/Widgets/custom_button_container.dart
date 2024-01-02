@@ -7,21 +7,21 @@ class CustomButtonContainer extends StatelessWidget {
   final Color containerColor;
 
   const CustomButtonContainer({
+    Key? key,
     required this.buttonText,
     required this.onPressed,
     required this.textColor,
     required this.containerColor
-  });
+  }) : super(key: key) ;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(180, 47.65),
-          primary: containerColor,
+          minimumSize: const Size(180, 47.65), backgroundColor: containerColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
           ),

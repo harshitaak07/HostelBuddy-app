@@ -12,9 +12,9 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF202020),
+      backgroundColor: const Color(0xFF202020),
       body: Container(
-        padding: EdgeInsets.all(7.0),
+        padding: const EdgeInsets.all(7.0),
         child: Column(
           children: [
             const SizedBox(
@@ -31,7 +31,7 @@ class _LandingPageState extends State<LandingPage> {
               ),
             ),
             Container( // Text
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 children: [
                   const Align(

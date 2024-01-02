@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import "dart:ui";
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:hostelbuddy/Widgets/custom_button_container.dart';
 import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
@@ -39,17 +38,16 @@ class _SignUpState extends State<SignUp> {
                   children: [
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Container(
-                          child: IconButton(
+                      child: IconButton(
                         icon: const Icon(
-                          Icons.arrow_back_ios_outlined,
-                          color: Colors.black,
-                          size: 20,
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.black,
+                      size: 20,
                         ),
                         onPressed: () {
-                          Navigator.pop(context);
+                      Navigator.pop(context);
                         },
-                      )),
+                      ),
                     ),
                     const Align(
                       alignment: Alignment.centerLeft,
