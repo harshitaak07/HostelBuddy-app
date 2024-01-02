@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:hostelbuddy/Widgets/forgot_password_link.dart';
 import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
@@ -33,17 +33,16 @@ class _LoginState extends State<Login> {
                   Row(children: [
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Container(
-                          child: IconButton(
+                      child: IconButton(
                         icon: const Icon(
-                          Icons.arrow_back_ios_outlined,
-                          color: Colors.black,
-                          size: 20,
+                      Icons.arrow_back_ios_outlined,
+                      color: Colors.black,
+                      size: 20,
                         ),
                         onPressed: () {
-                          Navigator.pop(context);
+                      Navigator.pop(context);
                         },
-                      )),
+                      ),
                     ),
                     const Text(
                       'Back',

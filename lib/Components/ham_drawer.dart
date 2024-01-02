@@ -13,14 +13,14 @@ class _HamDrawerState extends State<HamDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        child: ListView(padding: EdgeInsets.all(10.0), children: [
+        child: ListView(padding: const EdgeInsets.all(10.0), children: [
       DrawerHeader(
         child: Align(
             alignment: Alignment.center,
             child: Row(
               children: [
-                Icon(Icons.article_outlined),
-                SizedBox(width: 10.0),
+                const Icon(Icons.article_outlined),
+                const SizedBox(width: 10.0),
                 Text(
                   'Menu',
                   style: GoogleFonts.prompt(

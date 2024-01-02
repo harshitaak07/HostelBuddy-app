@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hostelbuddy/Screens/Navigation.dart';
+import 'package:hostelbuddy/Screens/navigation.dart';
 import 'package:hostelbuddy/Screens/pickup.dart';
 import 'package:hostelbuddy/Screens/bank.dart';
 import 'package:hostelbuddy/Screens/details.dart';
@@ -9,7 +9,7 @@ import 'package:hostelbuddy/Screens/landing_page.dart';
 import 'package:hostelbuddy/Screens/login.dart';
 import 'package:hostelbuddy/Screens/otp.dart';
 import 'package:hostelbuddy/Screens/account.dart';
-import 'package:hostelbuddy/Screens/feedback.dart';
+// import 'package:hostelbuddy/Screens/feedback.dart';
 import 'package:hostelbuddy/Screens/initialize.dart';
 import 'package:hostelbuddy/Screens/delivery.dart';
 import 'package:hostelbuddy/Screens/reset.dart';
@@ -26,12 +26,12 @@ void main() async {
   try {
     await Firebase.initializeApp();
   } catch (e) {
-    print('Error reinitializing Firebase: $e');
+    // print('Error reinitializing Firebase: $e');
   }
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
-      builder: (context) => MyApp(), // Wrap your app
+      builder: (context) => const MyApp(), // Wrap your app
     ),
   );
 }
@@ -53,39 +53,39 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: (settings) {
           if (settings.name == '/Login') {
             return MaterialPageRoute(
-              builder: (context) => Login(),
+              builder: (context) => const Login(),
             );
           } else if (settings.name == '/Signup') {
             return MaterialPageRoute(
-              builder: (context) => SignUp(),
+              builder: (context) => const SignUp(),
             );
           } else if (settings.name == '/welcome') {
             return MaterialPageRoute(
-              builder: (context) => Welcome(),
+              builder: (context) => const Welcome(),
             );
           } else if (settings.name == '/hosteltype') {
             return MaterialPageRoute(
-              builder: (context) => HostelType(),
+              builder: (context) => const HostelType(),
             );
           } else if (settings.name == '/details') {
             return MaterialPageRoute(
-              builder: (context) => Details(),
+              builder: (context) => const Details(),
             );
           } else if (settings.name == '/forgot') {
             return MaterialPageRoute(
-              builder: (context) => Forgot(),
+              builder: (context) => const Forgot(),
             );
           } else if (settings.name == '/otp') {
             return MaterialPageRoute(
-              builder: (context) => Otp(),
+              builder: (context) => const Otp(),
             );
           } else if (settings.name == '/done') {
             return MaterialPageRoute(
-              builder: (context) => Bank(),
+              builder: (context) => const Bank(),
             );
           } else if (settings.name == '/pickup') {
             return MaterialPageRoute(
-              builder: (context) => Pickup(),
+              builder: (context) => const Pickup(),
             );
           } /*else if (settings.name == '/feedback') {
             return MaterialPageRoute(
@@ -93,36 +93,35 @@ class MyApp extends StatelessWidget {
             );
           } */ else if (settings.name == '/initialize') {
             return MaterialPageRoute(
-              builder: (context) => Initialize(),
+              builder: (context) => const Initialize(),
             );
           } else if (settings.name == '/account') {
             return MaterialPageRoute(
-              builder: (context) => Account(),
+              builder: (context) => const Account(),
             );
           } else if (settings.name == '/nav') {
             return MaterialPageRoute(
-              builder: (context) => Nav(),
+              builder: (context) => const Nav(),
             );
           } else if (settings.name == '/delivery') {
             return MaterialPageRoute(
-              builder: (context) => Delivery(),
+              builder: (context) => const Delivery(),
             );
           } else if (settings.name == '/reset') {
             return MaterialPageRoute(
-              builder: (context) => Reset(),
+              builder: (context) => const Reset(),
             );
           }
           return MaterialPageRoute(
-            builder: (context) => LandingPage(),
+            builder: (context) => const LandingPage(),
           );
 
           /// Handle other routes if needed
         },
         debugShowCheckedModeBanner: false,
-        useInheritedMediaQuery: true,
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
-        home: LandingPage(),
+        home: const LandingPage(),
       ),
     );
   }

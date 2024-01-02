@@ -11,9 +11,9 @@ class _HostelTypeState extends State<HostelType> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFF202020),
+        backgroundColor: const Color(0xFF202020),
         body: Container(
-          padding: EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(40.0),
           child: Column(
             children: [
               const SizedBox(
@@ -22,7 +22,7 @@ class _HostelTypeState extends State<HostelType> {
               Align(
               alignment: Alignment.center,
               child: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back_ios_outlined,
@@ -69,20 +69,18 @@ class _HostelTypeState extends State<HostelType> {
                 height: 80,
               ),
               Container(
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 child: ElevatedButton(
                   onPressed: () {
                      Navigator.pushNamed(context, '/details');
                   },
                   style: ElevatedButton.styleFrom(
-                      minimumSize: Size(295,44),
-                      primary:
-                          Colors.white, //specify the button's elevation color
+                      minimumSize: const Size(295,44), backgroundColor: Colors.white, //specify the button's elevation color
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0))),
                   child: Row(
                      children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 70,
                       ),
                       const Align(
@@ -111,20 +109,18 @@ class _HostelTypeState extends State<HostelType> {
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/details');
                     },
                     style: ElevatedButton.styleFrom(
-                        minimumSize: Size(295,44),
-                        primary:
-                            Colors.white, //specify the button's elevation color
+                        minimumSize: const Size(295,44), backgroundColor: Colors.white, //specify the button's elevation color
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0))),
                     child: Row(
                      children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Container(
