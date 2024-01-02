@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Widgets/custom_button_container.dart';
+import 'package:hostelbuddy/Widgets/username_textfield.dart';
+
 // ignore: camel_case_types
-class forgot extends StatefulWidget {
-  const forgot({super.key});
+class Forgot extends StatefulWidget {
+  const Forgot({super.key});
 
   @override
-  State<forgot> createState() => _forgotState();
+  State<Forgot> createState() => _ForgotState();
 }
 
 // ignore: camel_case_types
-class _forgotState extends State<forgot> {
+class _ForgotState extends State<Forgot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +54,7 @@ class _forgotState extends State<forgot> {
             ),
             Expanded(
                 child: Container(
-                  height: 545,
+              height: 545,
               width: 700,
               padding: const EdgeInsets.all(45.0),
               decoration: const BoxDecoration(
@@ -72,80 +75,39 @@ class _forgotState extends State<forgot> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         fontSize: 28,
-                        fontFamily: 'sfpro'
-                      ),
+                        fontFamily: 'sfpro'),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Don’t worry, enter your registered number and we’ll send you a verification code. ",
-                    style: GoogleFonts.montserrat(
+                    child: Text(
+                      "Don’t worry, enter your registered number and we’ll send you a verification code. ",
+                      style: GoogleFonts.montserrat(
                         color: Colors.black,
                         fontSize: 16,
                       ),
                       textAlign: TextAlign.left,
-                  ),
+                    ),
                   ),
                   const SizedBox(
                     height: 50,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Enter your Username/Number",
-                    style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
+                  UsernameTextField(
+                    text: "Enter your Username / Number",
+                    onPressed: () {
+                      // Define what should happen on button press
+                    }, textColor: Colors.black, containerColor: Colors.black, keyboardType: TextInputType.multiline
                   ),
+                  const SizedBox(
+                    height: 40,
                   ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(306, 54),
-                          primary: Colors.black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                       keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                          ),
-                      ),
-                    ),
-                  ),
-                   const SizedBox(
-                    height: 50,
-                  ),
-                Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/otp');
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(180, 47.65),
-                          primary: Colors.black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0))),
-                      child: Text(
-                        "Send OTP",
-                        style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
+                  CustomButtonContainer(
+                    buttonText: "Send OTP",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/otp');
+                    }, containerColor: Colors.black, textColor: Colors.white, 
                   ),
                 ],
               ),

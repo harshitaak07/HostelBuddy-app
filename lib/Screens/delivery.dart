@@ -1,23 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class request extends StatefulWidget {
-  const request({super.key});
+class Delivery extends StatefulWidget {
+  const Delivery({super.key});
 
   @override
-  State<request> createState() => _requestState();
+  State<Delivery> createState() => _DeliveryState();
 }
 
-class _requestState extends State<request> {
+class _DeliveryState extends State<Delivery> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF202020),
       body: Container(
-        padding: const EdgeInsets.all(35.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(children: [
-          const SizedBox(
-            height: 90,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(bottom: 35, right: 10),
+                height: 140,
+                width: 157.66,
+                decoration: const BoxDecoration(
+                    image:
+                        DecorationImage(image: AssetImage("assets/logo.png"))),
+              )
+            ],
           ),
           const Align(
               alignment: Alignment.topLeft,

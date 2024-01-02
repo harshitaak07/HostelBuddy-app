@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class hosteltype extends StatefulWidget {
-  const hosteltype({super.key});
+class HostelType extends StatefulWidget {
+  const HostelType({super.key});
 
   @override
-  State<hosteltype> createState() => _hosteltypeState();
+  State<HostelType> createState() => _HostelTypeState();
 }
 
-class _hosteltypeState extends State<hosteltype> {
+class _HostelTypeState extends State<HostelType> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

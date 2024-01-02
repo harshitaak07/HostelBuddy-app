@@ -1,23 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class pickup extends StatefulWidget {
-  const pickup({super.key});
+class Pickup extends StatefulWidget {
+  const Pickup({super.key});
 
   @override
-  State<pickup> createState() => _pickupState();
+  State<Pickup> createState() => _PickupState();
 }
 
-class _pickupState extends State<pickup> {
+class _PickupState extends State<Pickup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF202020),
       body: Container(
-        padding: const EdgeInsets.all(35.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(children: [
-          const SizedBox(
-            height: 120,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(bottom: 35, right: 10),
+                height: 140,
+                width: 157.66,
+                decoration: const BoxDecoration(
+                    image:
+                        DecorationImage(image: AssetImage("assets/logo.png"))),
+              )
+            ],
           ),
           const Align(
               alignment: Alignment.topLeft,
@@ -68,8 +78,8 @@ class _pickupState extends State<pickup> {
                     child: Row(
                       children: [
                         DropdownButton<String>(
-                          items:
-                              <String>['In front of E Block', 'Library'].map((String value) {
+                          items: <String>['In front of E Block', 'Library']
+                              .map((String value) {
                             return DropdownMenuItem<String>(
                               value: value,
                               child: Text(value),
@@ -104,8 +114,8 @@ class _pickupState extends State<pickup> {
                     child: Row(
                       children: [
                         DropdownButton<String>(
-                          items:
-                              <String>['In front of E Block', 'Library'].map((String value) {
+                          items: <String>['In front of E Block', 'Library']
+                              .map((String value) {
                             return DropdownMenuItem<String>(
                               value: value,
                               child: Text(value),

@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import "dart:ui";
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hostelbuddy/Widgets/google_sign_in.dart';
-import 'package:provider/provider.dart';
+import 'package:hostelbuddy/Widgets/button_containerb.dart';
+import 'package:hostelbuddy/Widgets/forgot_password_link.dart';
+import 'package:hostelbuddy/Widgets/google_signin_button.dart';
 
 // ignore: camel_case_types
-class welcome extends StatefulWidget {
-  const welcome({super.key});
+class Welcome extends StatefulWidget {
+  const Welcome({super.key});
 
   @override
-  State<welcome> createState() => _welcomeState();
+  State<Welcome> createState() => _WelcomeState();
 }
 
 // ignore: camel_case_types
-class _welcomeState extends State<welcome> {
+class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,27 +77,11 @@ class _welcomeState extends State<welcome> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, "/Login");
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(294, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.0))),
-                      child: const Text(
-                        "Login",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
+                  ButtonContainerB(
+                    buttonText: "Login",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/Login');
+                    },
                   ),
                   const SizedBox(
                     height: 15,
@@ -105,33 +90,12 @@ class _welcomeState extends State<welcome> {
                     alignment: Alignment.center,
                     child: Row(
                       children: [
-                        const Text(
-                            "                            Or using ",
+                        const Text("                              Or using ",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
                             )),
-                        Container(
-                          width: 20,
-                          height: 20,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              GestureDetector(
-                                onTap: () async {
-                                  final provider = Provider.of<googleSignInProvider>(context, listen: false);
-                                  await provider.googleLogin();
-                                },
-                                child: Container(
-                                  child: Image.network(
-                                    'http://pngimg.com/uploads/google/google_PNG19635.png',
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
+                        GoogleSignInButton()
                       ],
                     ),
                   ),
@@ -148,47 +112,20 @@ class _welcomeState extends State<welcome> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, "/Signup");
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(294, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.0))),
-                      child: const Text(
-                        "Sign Up",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
+                  ButtonContainerB(
+                    buttonText: "Sign Up",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/Signup');
+                    },
                   ),
                   const SizedBox(
                     height: 22,
                   ),
-                  Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Column(children: [
-                        TextButton(
-                          child: const Text(
-                            "Forgot Password? Click Here",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/forgot');
-                          },
-                        ),
-                      ])),
+                  ForgotPasswordLink(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/forgot');
+                    },
+                  ),
                 ],
               ),
             )),

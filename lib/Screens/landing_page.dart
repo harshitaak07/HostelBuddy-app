@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hostelbuddy/Widgets/button_containerw.dart';
 
-class landingpage extends StatefulWidget {
-  const landingpage({super.key});
+class LandingPage extends StatefulWidget {
+  const LandingPage({super.key});
 
   @override
-  State<landingpage> createState() => _landingpageState();
+  State<LandingPage> createState() => _LandingPageState();
 }
 
-class _landingpageState extends State<landingpage> {
+class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +20,7 @@ class _landingpageState extends State<landingpage> {
             const SizedBox(
               height: 60,
             ),
-            Container(
+            Container( // Image
               width: MediaQuery.of(context).size.width,
               height: 480,
               decoration: const BoxDecoration(
@@ -29,7 +30,7 @@ class _landingpageState extends State<landingpage> {
                 ),
               ),
             ),
-            Container(
+            Container( // Text
               padding: EdgeInsets.all(10),
               child: Column(
                 children: [
@@ -59,27 +60,11 @@ class _landingpageState extends State<landingpage> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/welcome');
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(294, 54),
-                          primary: Colors
-                              .white, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
-                      child: const Text(
-                        "Get Started",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            fontFamily: 'sfpro'),
-                      ),
-                    ),
+                  ButtonContainerW(
+                    buttonText: "Get Started",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/welcome');
+                    },
                   ),
                 ],
               ),

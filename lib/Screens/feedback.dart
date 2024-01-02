@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class feedback extends StatefulWidget {
-  const feedback({super.key});
+class Feedback extends StatefulWidget {
+  const Feedback({super.key});
 
   @override
-  State<feedback> createState() => _feedbackState();
+  State<Feedback> createState() => _FeedbackState();
 }
 
-class _feedbackState extends State<feedback> {
+class _FeedbackState extends State<Feedback> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _feedbackState extends State<feedback> {
               ),
             ),
             const Text(
-              "Kindly Take a moment to rate your experience!",
+              "Share your experience!",
               style: TextStyle(
                   fontFamily: 'sfpro',
                   fontSize: 25,
@@ -132,7 +132,7 @@ class _feedbackState extends State<feedback> {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 25,
             ),
             Row(children: [
               const SizedBox(width: 30),
@@ -157,7 +157,7 @@ class _feedbackState extends State<feedback> {
                   ),
                 ),
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 5),
               const Column(children: [
                 Text(
                   "Would you recommend?",

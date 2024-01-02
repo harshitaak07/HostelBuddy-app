@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class nav extends StatefulWidget {
-  const nav({super.key});
+class Nav extends StatefulWidget {
+  const Nav({super.key});
 
   @override
-  State<nav> createState() => _navState();
+  State<Nav> createState() => _NavState();
 }
 
-class _navState extends State<nav> {
+class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
