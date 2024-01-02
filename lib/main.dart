@@ -4,21 +4,21 @@ import 'package:hostelbuddy/Screens/pickup.dart';
 import 'package:hostelbuddy/Screens/bank.dart';
 import 'package:hostelbuddy/Screens/details.dart';
 import 'package:hostelbuddy/Screens/forgot.dart';
-import 'package:hostelbuddy/Screens/hosteltype.dart';
-import 'package:hostelbuddy/Screens/landingpage.dart';
+import 'package:hostelbuddy/Screens/hostel_type.dart';
+import 'package:hostelbuddy/Screens/landing_page.dart';
 import 'package:hostelbuddy/Screens/login.dart';
 import 'package:hostelbuddy/Screens/otp.dart';
 import 'package:hostelbuddy/Screens/account.dart';
 import 'package:hostelbuddy/Screens/feedback.dart';
 import 'package:hostelbuddy/Screens/initialize.dart';
-import 'package:hostelbuddy/Screens/request.dart';
+import 'package:hostelbuddy/Screens/delivery.dart';
 import 'package:hostelbuddy/Screens/reset.dart';
-import 'package:hostelbuddy/Screens/signup.dart';
+import 'package:hostelbuddy/Screens/sign_up.dart';
 import 'package:hostelbuddy/Screens/welcome.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hostelbuddy/Widgets/google_sign_in.dart';
+import 'package:hostelbuddy/Components/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => googleSignInProvider(),
+      create: (context) => GoogleSignInProvider(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -57,63 +57,63 @@ class MyApp extends StatelessWidget {
             );
           } else if (settings.name == '/Signup') {
             return MaterialPageRoute(
-              builder: (context) => signup(),
+              builder: (context) => SignUp(),
             );
           } else if (settings.name == '/welcome') {
             return MaterialPageRoute(
-              builder: (context) => welcome(),
+              builder: (context) => Welcome(),
             );
           } else if (settings.name == '/hosteltype') {
             return MaterialPageRoute(
-              builder: (context) => hosteltype(),
+              builder: (context) => HostelType(),
             );
           } else if (settings.name == '/details') {
             return MaterialPageRoute(
-              builder: (context) => details(),
+              builder: (context) => Details(),
             );
           } else if (settings.name == '/forgot') {
             return MaterialPageRoute(
-              builder: (context) => forgot(),
+              builder: (context) => Forgot(),
             );
           } else if (settings.name == '/otp') {
             return MaterialPageRoute(
-              builder: (context) => otp(),
+              builder: (context) => Otp(),
             );
           } else if (settings.name == '/done') {
             return MaterialPageRoute(
-              builder: (context) => bank(),
+              builder: (context) => Bank(),
             );
           } else if (settings.name == '/pickup') {
             return MaterialPageRoute(
-              builder: (context) => pickup(),
+              builder: (context) => Pickup(),
             );
-          } else if (settings.name == '/feedback') {
+          } /*else if (settings.name == '/feedback') {
             return MaterialPageRoute(
-              builder: (context) => feedback(),
+              builder: (context) => Feedback(),
             );
-          } else if (settings.name == '/initialize') {
+          } */ else if (settings.name == '/initialize') {
             return MaterialPageRoute(
-              builder: (context) => initialize(),
+              builder: (context) => Initialize(),
             );
           } else if (settings.name == '/account') {
             return MaterialPageRoute(
-              builder: (context) => account(),
+              builder: (context) => Account(),
             );
           } else if (settings.name == '/nav') {
             return MaterialPageRoute(
-              builder: (context) => nav(),
+              builder: (context) => Nav(),
             );
-          } else if (settings.name == '/request') {
+          } else if (settings.name == '/delivery') {
             return MaterialPageRoute(
-              builder: (context) => request(),
+              builder: (context) => Delivery(),
             );
           } else if (settings.name == '/reset') {
             return MaterialPageRoute(
-              builder: (context) => reset(),
+              builder: (context) => Reset(),
             );
           }
           return MaterialPageRoute(
-            builder: (context) => landingpage(),
+            builder: (context) => LandingPage(),
           );
 
           /// Handle other routes if needed
@@ -122,7 +122,7 @@ class MyApp extends StatelessWidget {
         useInheritedMediaQuery: true,
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
-        home: landingpage(),
+        home: LandingPage(),
       ),
     );
   }

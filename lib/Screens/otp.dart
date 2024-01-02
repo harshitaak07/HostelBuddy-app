@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Widgets/custom_colored_container.dart';
 
-class otp extends StatefulWidget {
-  const otp({super.key});
+class Otp extends StatefulWidget {
+  const Otp({super.key});
 
   @override
-  State<otp> createState() => _otpState();
+  State<Otp> createState() => _OtpState();
 }
 
-class _otpState extends State<otp> {
+class _OtpState extends State<Otp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,63 +91,19 @@ class _otpState extends State<otp> {
                     alignment: Alignment.center,
                     child: Row(
                       children: [
-                        Container(
-                          height: 54,
-                          width: 60,
-                          decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(4.0),
-                                bottomRight: Radius.circular(4.0),
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                              color: Colors.black),
-                        ),
+                        CustomColoredContainer(),
                         const SizedBox(
-                          width: 19,
+                          width: 13,
                         ),
-                        Container(
-                          height: 54,
-                          width: 60,
-                          decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(4.0),
-                                bottomRight: Radius.circular(4.0),
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                              color: Colors.black),
-                        ),
+                        CustomColoredContainer(),
                         const SizedBox(
-                          width: 19,
+                          width: 13,
                         ),
-                        Container(
-                          height: 54,
-                          width: 60,
-                          decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(4.0),
-                                bottomRight: Radius.circular(4.0),
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                              color: Colors.black),
-                        ),
+                        CustomColoredContainer(),
                         const SizedBox(
-                          width: 19,
+                          width: 13,
                         ),
-                        Container(
-                          height: 54,
-                          width: 60,
-                          decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(4.0),
-                                bottomRight: Radius.circular(4.0),
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                              color: Colors.black),
-                        )
+                        CustomColoredContainer(),
                       ],
                     ),
                   ),

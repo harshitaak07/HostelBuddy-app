@@ -2,21 +2,23 @@ import 'package:flutter/material.dart';
 import "dart:ui";
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Widgets/custom_button_container.dart';
+import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
 // ignore: camel_case_types
-class reset extends StatefulWidget {
-  const reset({super.key});
+class Reset extends StatefulWidget {
+  const Reset({super.key});
 
   @override
-  State<reset> createState() => _resetState();
+  State<Reset> createState() => _ResetState();
 }
 
 // ignore: camel_case_types
-class _resetState extends State<reset> {
+class _ResetState extends State<Reset> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF202020),
+        backgroundColor: const Color(0xFF202020),
         resizeToAvoidBottomInset: false,
         body: Column(
           children: [
@@ -53,7 +55,7 @@ class _resetState extends State<reset> {
             ),
             Expanded(
                 child: Container(
-                  height: 545,
+              height: 545,
               width: 700,
               padding: const EdgeInsets.all(45.0),
               decoration: const BoxDecoration(
@@ -74,106 +76,39 @@ class _resetState extends State<reset> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         fontSize: 28,
-                        fontFamily: 'sfpro'
-                      ),
+                        fontFamily: 'sfpro'),
                   ),
                   const SizedBox(
                     height: 40,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Create New Password",
-                    style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
+                  UsernameTextField(
+                    text: "Create New Password",
+                    onPressed: () {
+                      // Define what should happen on button press
+                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.visiblePassword
                   ),
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(306, 54),
-                          primary: Colors.black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                       keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                          ),
-                      ),
-                    ),
-                  ),
-                   const SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
-                Align(
-                    alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Confirm Password",
-                    style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
+                  UsernameTextField(
+                    text: "Confirm Password",
+                    onPressed: () {
+                      // Define what should happen on button press
+                    },textColor: Colors.black, containerColor: Colors.black, keyboardType: TextInputType.visiblePassword
                   ),
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(306, 54),
-                          primary: Colors.black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                       keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                          ),
-                      ),
-                    ),
-                  ),
-                const SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                      Navigator.pushNamed(context, '/hosteltype');
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(204, 54),
-                          primary: Colors.black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
-                      child: Text(
-                        "Done",
-                        style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
+                  CustomButtonContainer(
+                    buttonText: "Done",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/Login');
+                    }, textColor: Colors.white, containerColor: Colors.black,
                   ),
                 ],
               ),
             )),
           ],
-        )
-    );
+        ));
   }
 }

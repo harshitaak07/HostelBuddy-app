@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Widgets/custom_button_container.dart';
+import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
-class details extends StatefulWidget {
-  const details({super.key});
+class Details extends StatefulWidget {
+  const Details({super.key});
 
   @override
-  State<details> createState() => _detailsState();
+  State<Details> createState() => _DetailsState();
 }
 
-class _detailsState extends State<details> {
+class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,142 +60,39 @@ class _detailsState extends State<details> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Registration Number",
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.normal,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
+                  UsernameTextField(
+                      text: "Registration Number",
+                      onPressed: () {
+                        // Define what should happen on button press
+                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text,
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(280, 54),
-                          primary: Colors
-                              .white, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  ),
                   const SizedBox(
                     height: 27,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Room Number",
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.normal,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
+                  UsernameTextField(
+                      text: "Room Number",
+                      onPressed: () {
+                        // Define what should happen on button press
+                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(280, 54),
-                          primary: Colors
-                              .white, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  ),
                   const SizedBox(
                     height: 27,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Block",
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.normal,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
+                  UsernameTextField(
+                      text: "Block",
+                      onPressed: () {
+                        // Define what should happen on button press
+                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(280, 54),
-                          primary: Colors
-                              .white, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  ),
                   const SizedBox(
-                    height: 80,
+                    height: 75,
                   ),
-                  Container(
-                    child: ElevatedButton(
+                  CustomButtonContainer(
+                      buttonText: "Done",
                       onPressed: () {
                         Navigator.pushNamed(context, '/done');
-                      },
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(180, 45),
-                          primary: Colors
-                              .white, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0))),
-                      child: Text(
-                        "Done",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
+                      },textColor: Colors.black, containerColor: Colors.white
                     ),
-                  ),
                 ],
               )
               ),

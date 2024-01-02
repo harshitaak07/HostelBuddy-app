@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:hostelbuddy/Widgets/HamDrawer.dart';
+import 'package:hostelbuddy/Components/HamDrawer.dart';
 
-class bank extends StatefulWidget {
-  const bank({super.key});
+class Bank extends StatefulWidget {
+  const Bank({super.key});
 
   @override
-  State<bank> createState() => _bankState();
+  State<Bank> createState() => _BankState();
 }
 
-class _bankState extends State<bank> {
+class _BankState extends State<Bank> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,12 +57,15 @@ class _bankState extends State<bank> {
             ),
             Align(
                 alignment: Alignment.center,
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    Column(
+                child: Row(children: [
+                  const SizedBox(
+                    width: 50,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/pickup');
+                    },
+                    child: Column(
                       children: [
                         Container(
                           height: 100,
@@ -79,17 +82,23 @@ class _bankState extends State<bank> {
                           child: Text(
                             "Pickup",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                color: Colors.white),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    Column(
+                  ),
+                  const SizedBox(
+                    width: 50,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/delivery');
+                    },
+                    child: Column(
                       children: [
                         Container(
                           height: 110,
@@ -106,15 +115,16 @@ class _bankState extends State<bank> {
                           child: Text(
                             "Delivery",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                color: Colors.white),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],
-                    )
-                  ],
-                )),
+                    ),
+                  )
+                ])),
             const SizedBox(
               height: 55,
             ),
@@ -144,14 +154,12 @@ class _bankState extends State<bank> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: TextButton(
-                   child: const Text( "Navigation/Tracking",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        color: Colors.white)), 
-                        onPressed: () {  
-                          Navigator.pushNamed(context, '/pickup');
-                        },
+                    child: const Text("Navigation/Tracking",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.white)),
+                    onPressed: () {},
                   ),
                 ),
               ]),

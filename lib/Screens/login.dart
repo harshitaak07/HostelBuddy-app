@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Widgets/forgot_password_link.dart';
+import 'package:hostelbuddy/Widgets/username_textfield.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -81,85 +83,25 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 30,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Username/Contact Number",
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: const Size(306, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
+                  UsernameTextField(
+                    text: "Username / Contact Number",
+                    onPressed: () {
+                      // Define what should happen on button press
+                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.multiline
                   ),
                   const SizedBox(
                     height: 30,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Password",
-                      style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: const Size(306, 54),
-                          primary: Colors
-                              .black, //specify the button's elevation color
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      child: const TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
+                  UsernameTextField(
+                    text: "Password",
+                    onPressed: () {
+                      // Define what should happen on button press
+                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.visiblePassword
                   ),
                   const SizedBox(
                     height: 80,
                   ),
-                  TextButton(
-                    child: Text(
-                      "Forgot Password? Click here!",
-                      style: GoogleFonts.montserrat(
-                        color: const Color(0xFF606060),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
+                  ForgotPasswordLink(
                     onPressed: () {
                       Navigator.pushNamed(context, '/forgot');
                     },

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hostelbuddy/Widgets/custom_listtile.dart';
 
-class account extends StatefulWidget {
-  const account({super.key});
+class Account extends StatefulWidget {
+  const Account({super.key});
 
   @override
-  State<account> createState() => _accountState();
+  State<Account> createState() => _AccountState();
 }
 
-class _accountState extends State<account> {
+class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,81 +54,30 @@ class _accountState extends State<account> {
           const SizedBox(
             height: 120,
           ),
-          ListTile(
-            leading: const Icon(Icons.timer, color: Colors.white),
-            title: Text(
-              'Transaction History',
-              style: GoogleFonts.quicksand(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700),
-            ),
-            onTap: () {},
+          CustomListTile(
+            leadingIcon: Icons.language,
+            title: 'Transaction History',
+            textColor: Colors.white,
+            onTap: () {
+              // Define what should happen on tile tap
+            },
           ),
           const Divider(
             color: Colors.white,
             thickness: 1,
           ),
-          ListTile(
-            leading: const Icon(Icons.edit, color: Colors.white),
-            title: Text(
-              'Edit Profile',
-              style: GoogleFonts.quicksand(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700),
-            ),
-            onTap: () {},
+          CustomListTile(
+            leadingIcon: Icons.edit,
+            title: 'Edit Profile',
+            textColor: Colors.white,
+            onTap: () {
+              // Define what should happen on tile tap
+            },
           ),
           const Divider(
             color: Colors.white,
             thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.lock, color: Colors.white),
-            title: Text(
-              'Privacy and Security',
-              style: GoogleFonts.quicksand(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700),
-            ),
-            onTap: () {},
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.question_mark, color: Colors.white),
-            title: Text(
-              'Get Help',
-              style: GoogleFonts.quicksand(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700),
-            ),
-            onTap: () {},
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 1,
-          ),
-          ListTile(
-            leading: const Icon(Icons.language, color: Colors.white),
-            title: Text(
-              'Language',
-              style: GoogleFonts.quicksand(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700),
-            ),
-            onTap: () {},
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 1,
-          ),
+          )
         ],
       ),
     );
