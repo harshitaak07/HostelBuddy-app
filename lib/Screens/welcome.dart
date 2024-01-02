@@ -106,7 +106,7 @@ class _welcomeState extends State<welcome> {
                     child: Row(
                       children: [
                         const Text(
-                            "                        Login using OTP or ",
+                            "                            Or using ",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
@@ -186,18 +186,6 @@ class _welcomeState extends State<welcome> {
                           ),
                           onPressed: () {
                             Navigator.pushNamed(context, '/forgot');
-                          },
-                        ),
-                        TextButton(
-                          child: const Text(
-                            "Reset Password? Click Here",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/reset');
                           },
                         ),
                       ])),

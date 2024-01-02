@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>166880431213-sfrko7cot2uf3upfflbj7gar60kcvjfk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.166880431213-sfrko7cot2uf3upfflbj7gar60kcvjfk</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>166880431213-85qv7h0fbqsfuisthfl2t1qdmiag4at3.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDmdubqSYNujUgLE7IRu6pwFrjr8AmQxPQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>166880431213</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.hostelbuddy</string>
+	<key>PROJECT_ID</key>
+	<string>hostelbuddy-a56c6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hostelbuddy-a56c6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:166880431213:ios:5206614e26b5ce00158364</string>
+</dict>
+</plist>
