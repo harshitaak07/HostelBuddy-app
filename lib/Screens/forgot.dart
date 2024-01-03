@@ -13,6 +13,15 @@ class Forgot extends StatefulWidget {
 
 // ignore: camel_case_types
 class _ForgotState extends State<Forgot> {
+  String email = '';
+  TextEditingController emailController = TextEditingController();
+
+   @override
+  void dispose() {
+    emailController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,10 +103,12 @@ class _ForgotState extends State<Forgot> {
                     height: 50,
                   ),
                   UsernameTextField(
-                    text: "Enter your Username / Number",
-                    onPressed: () {
-                      // Define what should happen on button press
-                    }, textColor: Colors.black, containerColor: Colors.black, keyboardType: TextInputType.multiline
+                    text: "Email",
+                    onValueChanged: (value) {
+                      setState(() {
+                        email = value;
+                      });
+                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.visiblePassword, controller: emailController,
                   ),
                   const SizedBox(
                     height: 40,

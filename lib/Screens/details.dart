@@ -11,6 +11,21 @@ class Details extends StatefulWidget {
 }
 
 class _DetailsState extends State<Details> {
+  String registration = '';
+  String room = '';
+  String block = '';
+  TextEditingController regController = TextEditingController();
+  TextEditingController roomController = TextEditingController();
+  TextEditingController blockController = TextEditingController();
+
+   @override
+  void dispose() {
+    regController.dispose();
+    roomController.dispose();
+    blockController.dispose();
+    super.dispose();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,27 +77,33 @@ class _DetailsState extends State<Details> {
                   ),
                   UsernameTextField(
                       text: "Registration Number",
-                      onPressed: () {
-                        // Define what should happen on button press
-                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text,
+                      onValueChanged: (value) {
+                        setState(() {
+                        registration = value;
+                      });
+                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text, controller: regController,
                     ),
                   const SizedBox(
                     height: 27,
                   ),
                   UsernameTextField(
                       text: "Room Number",
-                      onPressed: () {
-                        // Define what should happen on button press
-                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text
+                      onValueChanged: (value) {
+                        setState(() {
+                        room = value;
+                      });
+                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text, controller: roomController,
                     ),
                   const SizedBox(
                     height: 27,
                   ),
                   UsernameTextField(
                       text: "Block",
-                      onPressed: () {
-                        // Define what should happen on button press
-                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text
+                      onValueChanged: (value) {
+                        setState(() {
+                        block = value;
+                      });
+                      },textColor: Colors.white, containerColor: Colors.white, keyboardType: TextInputType.text, controller: blockController,
                     ),
                   const SizedBox(
                     height: 75,
