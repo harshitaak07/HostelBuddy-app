@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hostelbuddy/Components/google_sign_in.dart';
+import 'package:hostelbuddy/Services/google_sign_in.dart';
 import 'package:provider/provider.dart'; // Import Provider
 // Google symbol login page function
 class GoogleSignInButton extends StatelessWidget {

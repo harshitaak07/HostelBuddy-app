@@ -14,6 +14,14 @@ class Reset extends StatefulWidget {
 
 // ignore: camel_case_types
 class _ResetState extends State<Reset> {
+  String password = '';
+  TextEditingController passwordController = TextEditingController();
+   @override
+  void dispose() {
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,18 +90,24 @@ class _ResetState extends State<Reset> {
                   ),
                   UsernameTextField(
                     text: "Create New Password",
-                    onPressed: () {
-                      // Define what should happen on button press
-                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.visiblePassword
+                    onValueChanged: (value) {
+                      setState(() {
+                        password = value;
+                      });
+                     
+                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.visiblePassword, controller: passwordController,
                   ),
                   const SizedBox(
                     height: 30,
                   ),
                   UsernameTextField(
                     text: "Confirm Password",
-                    onPressed: () {
-                      // Define what should happen on button press
-                    },textColor: Colors.black, containerColor: Colors.black, keyboardType: TextInputType.visiblePassword
+                    onValueChanged: (value) {
+                      setState(() {
+                        password = value;
+                      });
+                     
+                    },textColor: Colors.black, containerColor: Colors.black,keyboardType: TextInputType.visiblePassword, controller: passwordController,
                   ),
                   const SizedBox(
                     height: 40,
